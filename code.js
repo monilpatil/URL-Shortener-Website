@@ -1,8 +1,10 @@
 const express = require('express')
 const mysql = require('mysql2')
 require("dotenv").config();
+const cors = require('cors');
 const app = express();
 
+app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
 
